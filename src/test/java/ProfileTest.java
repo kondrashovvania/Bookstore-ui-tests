@@ -1,7 +1,7 @@
 import org.junit.Test;
 
 import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selenide.sleep;
+
 
 public class ProfileTest extends BaseTest {
 

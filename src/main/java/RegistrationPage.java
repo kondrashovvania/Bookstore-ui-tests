@@ -1,10 +1,11 @@
 import com.codeborne.selenide.SelenideElement;
-import org.openqa.selenium.By;
 
 import java.time.Duration;
 
 import static com.codeborne.selenide.Condition.enabled;
 import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Selectors.byClassName;
+import static com.codeborne.selenide.Selectors.byId;
 import static com.codeborne.selenide.Selenide.$;
 
 public class RegistrationPage {
@@ -16,11 +17,11 @@ public class RegistrationPage {
 
     private SelenideElement passwordField = $("[placeholder=\"Password\"]");
 
-    private SelenideElement checkBox = $(By.className("recaptcha-checkbox-border"));
+    private SelenideElement checkBox = $(byClassName("recaptcha-checkbox-border"));
 
-    private SelenideElement registerButton = $(By.id("register"));
+    private SelenideElement registerButton = $(byId("register"));
 
-    private SelenideElement newUserButton = $(By.id("newUser"));
+    private SelenideElement newUserButton = $(byId("newUser"));
 
     public void enterfirstNameField(String firstnameValue) {
         firstNameField.shouldBe(visible, Duration.ofSeconds(10));

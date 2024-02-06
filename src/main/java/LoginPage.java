@@ -1,10 +1,10 @@
 import com.codeborne.selenide.SelenideElement;
-import org.openqa.selenium.By;
 
 import java.time.Duration;
 
 import static com.codeborne.selenide.Condition.enabled;
 import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Selectors.byId;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static org.openqa.selenium.By.className;
@@ -13,7 +13,7 @@ public class LoginPage {
 
     private SelenideElement usernameField = $("[placeholder=\"UserName\"]");
     private SelenideElement passwordField = $("[placeholder=\"Password\"]");
-    private SelenideElement loginButton = $(By.id("login"));
+    private SelenideElement loginButton = $(byId("login"));
 
     public SelenideElement getLoginButton(){
         return loginButton;
@@ -21,9 +21,9 @@ public class LoginPage {
 
     private SelenideElement errorMessage =  $(className("mb-1"));
 
-    private SelenideElement newUserButton = $(By.id("newUser"));
+    private SelenideElement newUserButton = $(byId("newUser"));
 
-    private SelenideElement backToLoginButton = $(By.id("gotologin"));
+    private SelenideElement backToLoginButton = $(byId("gotologin"));
 
     private SelenideElement logOutButton = $(byText("Log out"));
 

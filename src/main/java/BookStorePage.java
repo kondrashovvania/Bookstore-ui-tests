@@ -1,7 +1,6 @@
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import java.util.ArrayList;
@@ -11,7 +10,7 @@ import static com.codeborne.selenide.CollectionCondition.exactTexts;
 import static com.codeborne.selenide.CollectionCondition.sizeGreaterThan;
 import static com.codeborne.selenide.Condition.enabled;
 import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selectors.byText;
+import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 import static java.util.Collections.reverseOrder;
@@ -19,7 +18,7 @@ import static java.util.Collections.sort;
 
 public class BookStorePage {
 
-    public ElementsCollection List = $$(By.className("rt-table"));
+    public ElementsCollection List = $$(byClassName("rt-table"));
 
     public SelenideElement imageSort = $(byText("Image"));
     public SelenideElement titleSort = $(byText("Title"));
@@ -43,7 +42,7 @@ public class BookStorePage {
     public ElementsCollection getPublisherColumnValues() {
         return publisherColumnValues;
     }
-    public ElementsCollection bookList = $$(By.className("mr-2"));
+    public ElementsCollection bookList = $$(byClassName("mr-2"));
     public int getbookList(){
         return bookList.size();
     }
@@ -71,8 +70,8 @@ public class BookStorePage {
         return notEmpty;
     }
 
-    public SelenideElement booksAuthor = $(By.className(""));
-    public SelenideElement booksPublisher = $(By.className(""));
+    public SelenideElement booksAuthor = $(byClassName(""));
+    public SelenideElement booksPublisher = $(byClassName(""));
 
     public SelenideElement loginPage = $("#item-0.btn.btn-light").$(".menu-list");
     public SelenideElement bookStorePage = $("#item-2.btn.btn-light.active");
@@ -80,14 +79,14 @@ public class BookStorePage {
     public SelenideElement profilePage = $("#item-3").$(".btn.btn-light").$(".menu-list");
     public SelenideElement bookStoreApiPage = $("#item-4").$(".btn.btn-light").$(".menu-list");
 
-    public SelenideElement gitPocketGuide = $(By.id("see-book-Git Pocket Guide"));
-    public SelenideElement learningJavaScript = $(By.id("see-book-Learning JavaScript Design Patterns"));
-    public SelenideElement designingEvolvableWeb = $(By.id("see-book-Designing Evolvable Web APIs with ASP.NET"));
-    public SelenideElement speakingJavaScript = $(By.id("see-book-Speaking JavaScript"));
-    public SelenideElement youDontKnowJS = $(By.id("see-book-You Don't Know JS"));
-    public SelenideElement programmingJavaScript = $(By.id("see-book-Programming JavaScript Applications"));
-    public SelenideElement eloquentJavaScript = $(By.id("see-book-Eloquent JavaScript, Second Edition"));
-    public SelenideElement understandingECMAScript = $(By.id("see-book-Understanding ECMAScript 6"));
+    public SelenideElement gitPocketGuide = $(byId("\"see-book-Git Pocket Guide\""));
+    public SelenideElement learningJavaScript = $(byId("see-book-Learning JavaScript Design Patterns"));
+    public SelenideElement designingEvolvableWeb = $(byId("see-book-Designing Evolvable Web APIs with ASP.NET"));
+    public SelenideElement speakingJavaScript = $(byId("see-book-Speaking JavaScript"));
+    public SelenideElement youDontKnowJS = $(byId("see-book-You Don't Know JS"));
+    public SelenideElement programmingJavaScript = $(byId("see-book-Programming JavaScript Applications"));
+    public SelenideElement eloquentJavaScript = $(byId("see-book-Eloquent JavaScript, Second Edition"));
+    public SelenideElement understandingECMAScript = $(byId("see-book-Understanding ECMAScript 6"));
 
 
     public SelenideElement getGitPocketGuide() {
